@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HSE — Labour Manager</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>HSE — Labour Manager</h1>
+    <div id="login" class="card">
+      <h2>Admin Login</h2>
+      <input id="email" placeholder="Email" value="hsengineering.40@gmail.com">
+      <input id="password" type="password" placeholder="Password" value="haadi.mmf">
+      <button id="loginBtn">Login</button>
+      <div id="loginMsg"></div>
+    </div>
+
+    <div id="app" style="display:none;">
+      <div class="card">
+        <h2>Add Labour</h2>
+        <input id="ln" placeholder="Name"><input id="lr" placeholder="Hourly rate" type="number">
+        <input id="ls" placeholder="Shift (optional)">
+        <button id="addLab">Add Labour</button>
+      </div>
+
+      <div class="card">
+        <h2>Labours</h2>
+        <table id="labTable"><thead><tr><th>Name</th><th>Rate</th><th>Shift</th><th>Actions</th></tr></thead><tbody></tbody></table>
+      </div>
+
+      <div class="card">
+        <h2>Mark Attendance</h2>
+        <select id="attLab"></select>
+        <input id="attDate" type="date" value="2025-09-07">
+        <input id="attHours" type="number" value="8">
+        <button id="markAtt">Mark</button>
+      </div>
+
+      <div class="card">
+        <h2>Calculate Wages</h2>
+        <select id="calcLab"></select>
+        <input id="from" type="date" value="2025-09-01">
+        <input id="to" type="date" value="2025-09-07">
+        <button id="calcBtn">Calculate</button>
+        <pre id="calcResult"></pre>
+      </div>
+
+      <div class="card">
+        <h2>Payments</h2>
+        <select id="payLab"></select>
+        <input id="payAmount" type="number" placeholder="Amount">
+        <input id="payDate" type="date" value="2025-09-07">
+        <button id="payBtn">Pay</button>
+        <div id="paymentsList"></div>
+      </div>
+    </div>
+  </div>
+<script src="/script.js"></script>
+</body>
+</html>
